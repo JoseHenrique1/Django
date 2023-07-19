@@ -1,0 +1,12 @@
+{% for c in clientes %}
+<p>{{ c.nome }}</p>
+<p>{{ c.idade }}</p>
+<a href="#">Update</a>
+<a href="#">Delete</a>
+<br>
+<br>
+{% endfor %}
+
+
+
+ Cliente.objects.filter(nome='joão')
