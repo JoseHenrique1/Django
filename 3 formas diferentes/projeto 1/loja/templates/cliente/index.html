@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Lista de clientes</h1>
+<p>...</p>
+
+{% for c in clientes %}
+<p>{{ c.nome }}</p>
+<p>{{ c.idade }}</p>
+<a href="{% url 'cliente_update' id=c.pk %}">Update</a>
+<a href="{% url 'cliente_delete' id=c.pk %}">Delete</a>
+<br>
+<br>
+{% endfor %}
+
+{% endblock %}
