@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+    <h1>Carros</h1>
+    <a href="{% url 'criar_carro' %}">Adicionar</a>
+
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+        {% for carro in object_list %}
+        <tr>
+            <td>{{ carro.tipo }}</td>
+            <td>{{ carro.valor }}</td>
+            <td><a href="{% url 'atualizar_carro' pk=carro.id%}">Editar</a></td>
+            <td><a href="{% url 'excluir_carro' pk=carro.id %}">Excluir</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+{% endblock content%}

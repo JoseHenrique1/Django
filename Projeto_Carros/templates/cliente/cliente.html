@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>Clientes</h1>
+<a href="{% url 'criar_cliente' %}">Criar cliente</a>
+
+<table>
+    <tr>
+        <th>Cliente</th>
+        <th>Carro</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+    </tr>
+    {% for cliente in object_list %}
+    <tr>
+        <td>{{ cliente.nome }}</td>
+        <td>{{ cliente.carro }}</td>
+        <td><a href="{% url 'atualizar_cliente' pk=cliente.id %}">Editar</a></td>
+        <td><a href="{% url 'excluir_cliente' pk=cliente.id %}">Excluir</a></td>
+    </tr>
+        {% endfor %}
+</table>
+
+
+{% endblock content %}
+
+
+
+
+

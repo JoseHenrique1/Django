@@ -1,0 +1,46 @@
+criar venv
+
+ativar venv
+    cd venv/Scripts
+    ativate
+
+
+
+voltar pastas
+    cd..
+    cd..
+
+POR ENQUANTO NÃO VOU INSTALAR OS PACOTES DO REQUIREMENTS.TXT
+
+    -- APENAS O DJANGO 
+
+
+
+
+criando projeto
+    django-admin startproject nome_projeto
+
+
+
+criar um pasta "Apps", para organizar os apps, embora vai ter só um
+
+criar um app e depois coloca-lo nesta pasta
+    py manage.py startapp nome_app
+
+modificar o nome do app no arquivo "app.py" do aplicativo criado EX: Apps.carro
+
+
+
+
+criar uma pasta de templates do projeto
+
+no settings, em templates, no DIR, colocar:
+    BASE_DIR / "templates"
+
+
+
+criar um pasta de static  do projeto
+
+no settings devemos colocar:
+    STATIC_URL = 'static/' # pasta dos css js img
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # confirma a utilização
